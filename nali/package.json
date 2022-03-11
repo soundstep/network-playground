@@ -1,0 +1,25 @@
+{
+    "name": "@itv/nali",
+    "version": "1.0.0",
+    "description": "Proxy server",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "mkdir -p app/certs && ./scripts/create-certs.js",
+        "start": "node index.js",
+        "docker:build": "docker build . --progress plain -t nali:latest -t nali:$npm_package_version",
+        "docker:run": "pnpm docker:cleanup && docker run -dit -p 80:8080 -p 443:8443 --name nali nali",
+        "docker:run:inline": "pnpm docker:cleanup && docker run -it -p 80:8080 -p 443:8443 --name nali nali",
+        "docker:stop": "docker stop nali",
+        "docker:cleanup": "docker ps -a -q --filter=\"name=nali\" | xargs -I {} docker stop {} && docker ps -a -q --filter=\"name=nali\" | xargs -I {} docker rm -f {}",
+        "docker:exec": "docker exec -it nali /bin/sh"
+    },
+    "keywords": [],
+    "author": "romuald.quantin@itv.com",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.3"
+    },
+    "devDependencies": {
+        "mkcert": "^1.5.0"
+    }
+}
