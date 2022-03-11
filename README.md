@@ -1,4 +1,6 @@
-# CTV Kali
+# Network playground
+
+This repo is a playground around network, DNS, proxy, certificate, SSL, etc.
 
 ## Summary
 
@@ -24,7 +26,7 @@ A lot of tools that seems to be more active than passive, to create attacks.
 
 ### Bettercap
 
-Amazing tool to inspect network. The few things I tried to seems to be stopped by some router checks:
+Amazing tool to inspect network. The few things I tried seem to be stopped by some router checks:
 
 ```
 192.168.1.0/24 > 192.168.1.202  » [08:28:38] [sys.log] [inf] arp.spoof arp spoofer started, probing 1 targets.
