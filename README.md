@@ -41,9 +41,9 @@ https://www.youtube.com/watch?v=A7nih6SANYs
 
 This is really hard, and still in progress.
 
-Having difficulting creating a fully trusted certificate to use as a proxy server.
+Having difficulties creating a fully trusted certificate to use as a proxy server.
 
-See the nali folder which create a CA cert that can be truted (instead of the certificate themselves but that won't work on a TV).
+See the nali folder which creates a CA cert that can be trusted (instead of the certificate themselves but that won't work on a TV).
 
 TO be able to do: DNS Checf --> proxy server --> real server, to have a better chance at inspecting https traffic (and decrypting), we need:
 
